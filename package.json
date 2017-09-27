@@ -1,0 +1,23 @@
+{
+  "name": "ol-closure-transform",
+  "version": "1.0.0",
+  "description": "Test to build a project with closure, including ol version from transformed ol-package back to closure goog dependency system",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint build.js src",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "eslint-config-openlayers": "^7.0.0",
+    "google-closure-compiler": "^20170521.0.0",
+    "googshift": "^0.9.1",
+    "openlayers": "^4.3.4"
+  },
+  "eslintConfig": {
+    "extends": "openlayers",
+    "env": {
+      "es6": true
+    }
+  }
+}
