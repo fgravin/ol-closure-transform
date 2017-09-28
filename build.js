@@ -2,17 +2,21 @@ const Compiler = require('google-closure-compiler').compiler;
 
 const compiler = new Compiler({
   js: [
-    'node_modules/openlayers/build/ol.ext/rbush.js',
-    'node_modules/openlayers/build/ol.ext/pbf.js',
-    'node_modules/openlayers/build/ol.ext/vectortile.js',
-    'node_modules/openlayers/build/ol.ext/pixelworks.js',
-    'node_modules/openlayers/src/**.js',
-    'node_modules/openlayers/externs/olx.js',
-    'node_modules/openlayers/externs/oli.js',
-    './src/**.js',
+    '/home/fgravin/dev/openlayers/build/ol.ext/rbush.js',
+    '/home/fgravin/dev/openlayers/build/ol.ext/pbf.js',
+    // '/home/fgravin/dev/openlayers/build/ol.ext/vectortile.js',
+    '/home/fgravin/dev/openlayers/build/ol.ext/pixelworks.js',
+    '/home/fgravin/dev/openlayers/src/**.js',
+    '/home/fgravin/dev/openlayers/externs/olx.js',
+    '/home/fgravin/dev/openlayers/externs/oli.js',
+    './src/**.js'
   ],
-  compilation_level: 'ADVANCED',
-  js_output_file: 'dist/app.js'
+  compilation_level: 'SIMPLE',
+  js_output_file: 'dist/app.js',
+  create_source_map: true,
+  debug: true,
+  formatting: 'PRINT_INPUT_DELIMITER',
+
 });
 
 compiler.run((exit, out, err) => {
